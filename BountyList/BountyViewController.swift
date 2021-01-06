@@ -47,6 +47,8 @@ class BountyViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("It's Clicked \(indexPath.row)")
+        performSegue(withIdentifier: "showDetail", sender: nil)
+        // 세그웨이 수행 후 같이 껴서 보내는 객체 => sender
     }
 }
 
