@@ -106,22 +106,55 @@
                                     <action selector="close:" destination="SL3-vK-5DJ" eventType="touchUpInside" id="5bV-fA-rQT"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kmo-QL-28l">
+                                <rect key="frame" x="50" y="100" width="314" height="448.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kmo-QL-28l" secondAttribute="height" multiplier="7:10" id="QwM-WM-wPm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0C-w1-r7u">
+                                <rect key="frame" x="182" y="670" width="50" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luffy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVn-qm-GYw">
+                                <rect key="frame" x="170" y="594" width="74" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ECr-9C-Vlp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="tVn-qm-GYw" firstAttribute="top" secondItem="kmo-QL-28l" secondAttribute="bottom" constant="45.5" id="9a3-x9-e8g"/>
+                            <constraint firstItem="kmo-QL-28l" firstAttribute="leading" secondItem="ECr-9C-Vlp" secondAttribute="leading" constant="50" id="Cnu-Vy-Uoy"/>
+                            <constraint firstItem="kmo-QL-28l" firstAttribute="top" secondItem="ECr-9C-Vlp" secondAttribute="top" constant="100" id="Ghx-bk-XtV"/>
                             <constraint firstItem="ECr-9C-Vlp" firstAttribute="trailing" secondItem="iH6-Y6-Tjy" secondAttribute="trailing" constant="20" id="I8C-HV-GjH"/>
+                            <constraint firstItem="kmo-QL-28l" firstAttribute="centerX" secondItem="ECr-9C-Vlp" secondAttribute="centerX" id="Y94-5J-hhi"/>
+                            <constraint firstItem="tVn-qm-GYw" firstAttribute="centerX" secondItem="kmo-QL-28l" secondAttribute="centerX" id="hd9-kV-Eek"/>
                             <constraint firstItem="iH6-Y6-Tjy" firstAttribute="top" secondItem="ECr-9C-Vlp" secondAttribute="top" constant="16" id="sh0-WX-OjY"/>
+                            <constraint firstItem="k0C-w1-r7u" firstAttribute="top" secondItem="kmo-QL-28l" secondAttribute="bottom" constant="121.5" id="uvA-bV-vcF"/>
+                            <constraint firstItem="k0C-w1-r7u" firstAttribute="centerX" secondItem="kmo-QL-28l" secondAttribute="centerX" id="yFh-1o-gNV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bountyLabel" destination="k0C-w1-r7u" id="XII-mY-74e"/>
+                        <outlet property="imgView" destination="kmo-QL-28l" id="Lh6-J4-vwQ"/>
+                        <outlet property="nameLabel" destination="tVn-qm-GYw" id="Iob-T3-ksf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCZ-oa-Z4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808.69565217391312" y="102.45535714285714"/>
+            <point key="canvasLocation" x="931.88405797101461" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
         <image name="close_ic" width="128" height="128"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
