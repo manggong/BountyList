@@ -12,9 +12,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bountyLabel: UILabel!
-    
-    var bountyInfo: BountyInfo?
 
+    let viewModel = DetailViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
     
     func updateUI() {
         
-        if let bountyInfo = self.bountyInfo {
+        if let bountyInfo = self.viewModel.bountyInfo {
             imgView.image = bountyInfo.image
             nameLabel.text = bountyInfo.name
             bountyLabel.text = "\(bountyInfo.bounty)"
@@ -37,4 +37,12 @@ class DetailViewController: UIViewController {
         //completion 이벤트 후에 생길 일
     }
     
+}
+
+class DetailViewModel {
+    var bountyInfo: BountyInfo?
+    
+    func update(model: BountyInfo?) {
+        bountyInfo = model
+    }
 }
